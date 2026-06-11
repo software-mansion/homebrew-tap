@@ -4,7 +4,7 @@ cask "simcam" do
 
   url "https://updates.simcam.swmansion.com/artifacts/SimCam-#{version.csv.first}-#{version.csv.second}.dmg"
   name "SimCam"
-  desc "Camera testing tool for the iOS Simulator"
+  desc "Control virtual camera of your iOS Simulator using menubar app or a CLI: stream your Mac's webcam, inject an image, or generate a QR code."
   homepage "https://simcam.swmansion.com/"
 
   livecheck do
