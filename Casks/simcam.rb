@@ -13,7 +13,7 @@ cask "simcam" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sequoia"
+  depends_on macos: :sequoia
 
   app "SimCam.app"
   binary "#{appdir}/SimCam.app/Contents/MacOS/simcamctl"
