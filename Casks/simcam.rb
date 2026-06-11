@@ -22,7 +22,6 @@ cask "simcam" do
 
   zap trash: [
     "~/Library/Application Support/com.swmansion.SimCam",
-    "~/Library/Application Support/SimCam",
     "~/Library/Caches/com.swmansion.SimCam",
     "~/Library/HTTPStorages/com.swmansion.SimCam",
     "~/Library/Preferences/com.swmansion.SimCam.plist",
