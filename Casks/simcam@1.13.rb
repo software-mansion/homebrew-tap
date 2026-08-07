@@ -1,4 +1,4 @@
-cask "simcam" do
+cask "simcam@1.13" do
   version "1.13,32"
   sha256 "6ae0eda1fdfb1ebb283219c6810026b7d6368e428e479d5f8a0c0bc00422c7d4"
 
@@ -7,16 +7,18 @@ cask "simcam" do
   desc "Control virtual camera of your iOS Simulator using menubar app or a CLI: stream your Mac's webcam, inject an image, or generate a QR code."
   homepage "https://simcam.swmansion.com/"
 
-  livecheck do
-    url "https://updates.simcam.swmansion.com/appcast.xml"
-    strategy :sparkle
-  end
-
-  auto_updates true
+  conflicts_with cask: "simcam"
   depends_on macos: :sequoia
 
   app "SimCam.app"
   binary "#{appdir}/SimCam.app/Contents/MacOS/simcamctl"
+
+  postflight do
+    system_command "/usr/bin/defaults",
+                   args: ["write", "com.swmansion.SimCam", "SUEnableAutomaticChecks", "-bool", "false"]
+    system_command "/usr/bin/defaults",
+                   args: ["write", "com.swmansion.SimCam", "SUAutomaticallyUpdate", "-bool", "false"]
+  end
 
   uninstall quit: "com.swmansion.SimCam"
 
