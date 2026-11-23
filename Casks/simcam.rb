@@ -1,6 +1,6 @@
 cask "simcam" do
-  version "1.16,35"
-  sha256 "8e37f5d649439f5734649ee7cf67b1dadabff8fbe7c81bc846b0ca9bb043e6e3"
+  version "2.0,36"
+  sha256 "e34c140f3ce81b8c71540e843eccb4a14bd296bc4de0bec2f694210129d94f2c"
 
   url "https://updates.simcam.swmansion.com/artifacts/SimCam-#{version.csv.first}-#{version.csv.second}.dmg"
   name "SimCam"
